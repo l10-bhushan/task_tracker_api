@@ -9,7 +9,7 @@ type TaskRepository interface {
 	GetAllTasks() []model.Task
 	GetTaskById(id string) (model.Task, bool)
 	CreateTask(task model.Task) model.Task
-	UpdateTask(id string, task model.Task) model.Task
+	UpdateTask(id string, task model.Task) (model.Task, bool)
 	DeleteTask(id string)
 }
 

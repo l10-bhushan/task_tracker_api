@@ -42,3 +42,15 @@ func (t *TaskService) GetTaskById(id string) model.Task {
 	value, _ := t.repo.GetTaskById(id)
 	return value
 }
+
+func (t *TaskService) UpdateTask(id string, task model.Task) (model.Task, bool) {
+	task, result := t.repo.UpdateTask(id, task)
+	if !result {
+		return model.Task{}, false
+	}
+	return task, result
+}
+
+func (t *TaskService) DeleteTask(id string) {
+	t.repo.DeleteTask(id)
+}
