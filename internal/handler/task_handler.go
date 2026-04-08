@@ -13,7 +13,7 @@ type TaskHandler struct {
 	service *service.TaskService
 }
 
-func NewTaskService(s *service.TaskService) *TaskHandler {
+func NewTaskHandler(s *service.TaskService) *TaskHandler {
 	return &TaskHandler{
 		service: s,
 	}
