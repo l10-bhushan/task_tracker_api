@@ -15,6 +15,8 @@ type TaskRepository interface {
 
 // All these methods that you see below are for the in-memory db
 // Creating a in memory database that will store our tasks
+// Here, as InMemoryTaskRepository implements all the interface methods
+// That means InMemoryTaskRepository automatically implements TaskRepository interface
 type InMemoryTaskRepository struct {
 	data map[string]model.Task
 }
